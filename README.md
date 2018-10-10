@@ -30,7 +30,7 @@ Pull the latest vgTrack `master` repository and navigate to the directory in whi
 
 The database used for this sample application is PostgreSQL. **PostgreSQL must be used** as the `Sequelize.ARRAY` data type is being used to store the publishers collection internally to the application. 
 
-This step will not cover installing and configuring PostgreSQL, so if you are needing to configure a PostgreSQL environment a tutorial can be found [https://www.techrepublic.com/blog/diy-it-guy/diy-a-postgresql-database-server-setup-anyone-can-handle/](here) to assist with that.
+This step will not cover installing and configuring PostgreSQL, so if you are needing to configure a PostgreSQL environment a tutorial can be found at [https://www.techrepublic.com/blog/diy-it-guy/diy-a-postgresql-database-server-setup-anyone-can-handle/](https://www.techrepublic.com/blog/diy-it-guy/diy-a-postgresql-database-server-setup-anyone-can-handle/) to assist with that.
 
 The default database configuration for the application is located in `./config/config.js` relative to your applications root directory. The default database configuration has the following values set:
 ```
