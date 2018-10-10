@@ -2,6 +2,13 @@
 Vue.component('game-item', {
   props: ['id', 'title', 'description', 'release_date', 'platform', 'status', 'publishers', 'box_art_url', 'game'],
   methods: {
+    convertDate: function(timestamp) {
+      if(!isNaN(timestamp) && timestamp > 0) {
+        return new Date(timestamp).toLocaleDateString(); 
+      }
+
+      return "Unknown";
+    },
     addGame: function(game) {
       axios.post('http://localhost:5000/games', {
           title: game.title,
@@ -55,7 +62,7 @@ Vue.component('game-item', {
                     <div class="form-group col-md-2">
                         <label>Release Date</label>
                         <label class="information-label">
-                          {{ new Date(release_date).toLocaleDateString() }}
+                          {{ convertDate(release_date) }}
                         </label>
                     </div>
 
